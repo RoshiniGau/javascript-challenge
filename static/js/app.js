@@ -21,8 +21,10 @@ Object.entries(data[0]).forEach( function([key,value]) {
 data.forEach( day => {
     let tr =  tbody.append("tr");
     Object.entries(day).forEach( function([key,value]) {
-        let cell=tr.append("td");
-        cell.text(value);
+        let cell = tr.append("td");
+        var data = cell.text(value);
+       
+    
     }); 
     
 });
@@ -39,15 +41,19 @@ function getdata()
  console.log(date);
  //Select the city input from the form 
  var city = d3.select("#city").node().value;
+ city = city.toLowerCase();
  console.log(city);
  //Select the state input from the form 
  var state = d3.select("#state").node().value;
+ state = state.toLowerCase();
  console.log(state);
  //Select the country input from the form 
  var country = d3.select("#country").node().value;
+ country = country.toLowerCase();
  console.log(country);
  //Select the shape input from the form 
  var shape = d3.select("#shape").node().value;
+ shape = shape.toLowerCase();
  console.log(shape);
 
  //Clear the inputed valued 
