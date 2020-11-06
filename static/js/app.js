@@ -110,7 +110,7 @@ function tablebuild(date,city,state,country,shape)
     // Check to see if a state was entered
     if(state !== "")
     {
-      // Filter the data if date present.
+      // Filter the data if state present.
       var statedata = citydata.filter(data => data.state === state);
       console.log(statedata)
     }
@@ -121,7 +121,7 @@ function tablebuild(date,city,state,country,shape)
     // Check to see if a country was entered
     if(country !== "")
     {
-      // Filter the data if date present.
+      // Filter the data if country present.
       var countrydata= statedata.filter(data => data.country === country);
       console.log(filterdata)
     }
@@ -132,7 +132,7 @@ function tablebuild(date,city,state,country,shape)
     // Check to see if a shape was entered
     if(shape !== "")
     {
-      // Filter the data if date present.
+      // Filter the data if shape present.
       var shapedata = countrydata.filter(data => data.shape === shape);
       console.log(shapedata)
     }
